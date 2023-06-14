@@ -1,0 +1,121 @@
+@font-face {
+    font-family: glitch;
+    src: url(DigitalGlitchDemoRegular-8MleD.ttf);
+}
+
+body {
+    background-color: #FFFACD;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.header {
+    text-align: center;
+    color: orangered;
+    grid-area: hd;
+    font-family: glitch;
+}
+
+.button-panel {
+    grid-area: bp;
+}
+
+#lifebar {
+    grid-area: lb;
+    background-color: #422800;
+    color: white;
+}
+
+.start-game-button {
+  
+  font-family: glitch;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding:  18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.restart-game-button {
+    grid-area: rst;
+    font-family: glitch;
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding:  18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.sidebar {
+    grid-area: sd;
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding:  18px;
+    line-height: 50px;
+}
+
+.score {
+    grid-area: score;
+}
+
+.tile {
+    background-color: #4a4243;
+    cursor: pointer;
+    border-radius: 50px;
+    
+}
+
+
+.active {
+    background-color: white;
+    background-image: url(https://t4.ftcdn.net/jpg/01/16/45/35/360_F_116453557_T8Js6Vd3OrzExsWGARay69Hyg2KV0yPJ.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tile-wrapper {
+   grid-area: main;
+    display: grid;    
+    gap: 10px;
+    grid-template-columns:repeat(5, 100px);
+    grid-template-rows:repeat(5, 100px);
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);   
+    grid-template-rows:repeat(1, [col-start] 1fr); 
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "bp bp . . main main main main . . . . "
+    ". . sd . main main main main . . . . "
+    ". . sd . main main main main . . . ."
+    ". . . .  main main main main . . . ."
+    "lb lb . . main main main main . . . .";
+    
+}
